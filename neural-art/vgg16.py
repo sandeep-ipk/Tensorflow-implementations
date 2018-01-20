@@ -1,25 +1,6 @@
-########################################################################
-#
-# The pre-trained VGG16 Model for TensorFlow.
-#
-# This model seems to produce better-looking images in Style Transfer
-# than the Inception 5h model that otherwise works well for DeepDream.
-#
-# See the Python Notebook for Tutorial #15 for an example usage.
-#
-# Implemented in Python 3.5 with TensorFlow v0.11.0rc0
-#
-########################################################################
-#
-# This file is part of the TensorFlow Tutorials available at:
-#
-# https://github.com/Hvass-Labs/TensorFlow-Tutorials
-#
-# Published under the MIT License. See the file LICENSE for details.
-#
-# Copyright 2016 by Magnus Erik Hvass Pedersen
-#
-########################################################################
+# this model is taken from internet, not mine.
+
+
 
 import numpy as np
 import tensorflow as tf
