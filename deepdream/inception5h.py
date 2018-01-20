@@ -1,3 +1,6 @@
+# this model is taken from internet, not mine
+
+
 ########################################################################
 #
 # The Inception Model 5h for TensorFlow.
