@@ -23,9 +23,9 @@ But here are some tips on how to train a GAN:
 > Different batches for real and fake for the generator ~ Counter intuitive but works (:
 
 > Avoid sparse gradients and use:
-	> LeakyRelu
-	> Avg pooling / Conv2d + stride
-	> PixelShuffle / Conv2dTranspose + stride
+   > LeakyRelu
+   > Avg pooling / Conv2d + stride
+   > PixelShuffle / Conv2dTranspose + stride
 
 > Soft/ Noisy labels for the Discriminator.
 
@@ -36,8 +36,8 @@ But here are some tips on how to train a GAN:
 > optimizer: ADAM rules !
 
 > Tracks of failure are:
-	> Disc loss reduces to 0 quickly.
-	> If Gen loss decreases steadily it is fooling the Disc with garbage.
+   > Disc loss reduces to 0 quickly.
+   > If Gen loss decreases steadily it is fooling the Disc with garbage.
 
 > Labeled classification helps.
 
