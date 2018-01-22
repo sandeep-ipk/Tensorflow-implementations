@@ -1,3 +1,3 @@
 # Tensorflow-implementations
 
-tf implementations various machine learning algorithms
+TF implementations various machine learning algorithms
