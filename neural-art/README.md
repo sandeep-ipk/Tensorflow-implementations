@@ -16,7 +16,7 @@ In this algorithm we have a content image which we want to paint according to a 
 So our initial canvas is some random noise sampled from a gaussian. Then we input the noise image through the "model"   
 then we compute the feature maps and gram matrices at one layer or at multiple layers.
 
-We compare these computed feature maps and gram matrices with the pre computed feature maps of content image and gram matrices  
+We compare these computed feature maps and gram matrices with the pre computed feature maps of content image and gram matrices
 of style image at those layers. We will compare them using a mean squared error loss function and take the gradient of the  
 loss function w.r.t the input image. Now just perform gradient descent on the input image.
 
