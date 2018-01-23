@@ -127,7 +127,7 @@ loss_de = 'binary_crossentropy'
 # first the generator
 gen = Sequential()
 dropout = 0.4
-channel_depth = 128
+channel_depth = 32
 dim = 7
 gen.add(Dense(dim * dim * channel_depth, input_dim=latent_size))
 gen.add(BatchNormalization(momentum=0.9))
@@ -156,7 +156,7 @@ gen.add(Activation('tanh'))
 
 
 # now the discriminator
-channel_depth = 16
+channel_depth = 8
 dropout = 0.4
 
 D = Sequential()
