@@ -6,11 +6,7 @@ import math
 import PIL.Image
 from scipy.ndimage.filters import gaussian_filter
 from tqdm import tqdm
-
 import inception5h
-
-
-model = inception5h.Inception5h()
 
 
 def load_img(filename):
@@ -72,11 +68,12 @@ def get_tile_size(num_pixels, tile_size=400):
 
     return actual_tile_size
 
+model = inception5h.Inception5h()
 
-# this method is taken from internet, to minimize memory usage while running this program
+# this method's idea is taken from internet, to minimize memory usage while running this program
 # it takes tiles/patches from image and computes gradients one tile at a time.
 
-def compute_tiled_gradient(gradient, image, tile_size=400):
+def gradient_tiles(gradient, image, tile_size=400):
     grad = np.zeros_like(image)
     x_max, y_max, _ = image.shape
     #  print("image: ", image.shape) #  rgb type, no confusion
@@ -111,17 +108,16 @@ def compute_tiled_gradient(gradient, image, tile_size=400):
     return grad
 
 
-def optimize_img(layer_tensor, image, num_iterations=10, step_size=3.0, tile_size=400,recursive_level=0):
+def optimize(layer_tensor, image, num_iterations=10, step_size=3.0, tile_size=400,recursive_level=0):
 
     img1 = image.copy()
     gradient = model.get_gradient(layer_tensor)
     #print("gradient: ", gradient.shape)
 
     for i in tqdm(range(num_iterations)):
-        grad = compute_tiled_gradient(gradient=gradient, image=img1)
+        grad = gradient_tiles(gradient=gradient, image=img1)
         sigma = (i * 4.0) / num_iterations + 0.5
 
-        # the idea of smoothing the gradient also found in internet
         # can try this without the smoothing too
         grad_smooth1 = gaussian_filter(grad, sigma=sigma)
         grad_smooth2 = gaussian_filter(grad, sigma=sigma * 2)
@@ -164,7 +160,7 @@ def recursive_optimize(layer_tensor, image,
         image = blend * image + (1.0 - blend) * img_upscaled
 
     print("Recursive level:", num_repeats)
-    img_result = optimize_img(layer_tensor=layer_tensor,
+    img_result = optimize(layer_tensor=layer_tensor,
                                 image=image,
                                 num_iterations=num_iterations,
                                 step_size=step_size,
@@ -181,7 +177,7 @@ layer_tensor = model.layer_tensors[5][:,:,:,0:3]
 
 
 '''
-img_result = optimize_img(layer_tensor=layer_tensor,
+img_result = optimize(layer_tensor=layer_tensor,
                                 image=image,
                                 num_iterations=10,
                                 step_size=3.0,
