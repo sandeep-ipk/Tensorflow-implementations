@@ -17,7 +17,7 @@ So our initial canvas is some random noise sampled from a gaussian. Then we inpu
 then we compute the feature maps and gram matrices at one layer or at multiple layers.
 
 We compare these computed feature maps and gram matrices with the pre computed feature maps of content image and gram matrices
-of style image at those layers. We will compare them using a mean squared error loss function and take the gradient of the  
+of style image at those layers. We will compare them using a mean squared error loss function and take the gradient of the
 loss function w.r.t the input image. Now just perform gradient descent on the input image.
 
 Aditionally adding the total variational denoising loss reduces some of the noise in the generated images.  
