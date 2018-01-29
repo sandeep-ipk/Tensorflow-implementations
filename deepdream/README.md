@@ -20,7 +20,7 @@ Ofcourse, this idea is not mine originally and i found it on the internet.
 
 I use Tensorflow and Python 3.5.2.
 I was not able to perform much iterations as i do not have a GPU,  
-performing 50 iterations was more than what my CPU could handle :p
+performing 50 iterations was more than what my CPU could handle!
 
 
 
