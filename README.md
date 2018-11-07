@@ -1,6 +1,6 @@
 # Tensorflow-implementations
 
-TF implementations various machine learning algorithms.
+TF implementations various Deep Learning algorithms.
 
 Many of the pre-tained networks used in my project are not mine and some of the code snippets (sone functions like plotting images etc.) are taken from online resources like "stackoverflow" and "github". Forgive me because I cannot provide links to all these code snippets.
 
