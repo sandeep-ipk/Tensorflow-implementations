@@ -1,6 +1,7 @@
 # Deep convolutional GAN
 
 Generative adversarial networks have become very popular in the recent times.
+(Tutorial by Ian Goodfellow (NIPS 2016): https://www.youtube.com/watch?v=AJVyzd0rqdc)
 
 These kind of generative models assume that the input data follows an implicit latent  
 distribution, and directly sample the latent representation from that distribution.
