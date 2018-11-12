@@ -17,7 +17,8 @@ apply gradient-ascent. As simple as that.
 What i use in my code is an idea of recursive optimization i.e: first downsample the image  
 to a smaller size and then apply the algorithm on that image, now upsample it and again apply the  
 algorithm and then upsample the image until it reaches the original size by applying the algorithm.  
-Ofcourse, this idea is not mine originally and i found it on the internet.  
+Ofcourse, this idea is not mine originally and i found it on the YouTube.  
+(https://www.youtube.com/watch?v=ws-ZbiFV1Ms)
 
 I use Tensorflow and Python 3.5.2.
 I was not able to perform much iterations as i do not have a GPU,  
