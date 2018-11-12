@@ -2,6 +2,7 @@
 
 Deep dreaming is a very popular algorithm, we can say that it is  
 a by-product of Conv-Nets.  
+(https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html)
 
 In this code, I use a pre trained model of inception5h for the feature extraction.  
 The model extracts features from a inputted image.
