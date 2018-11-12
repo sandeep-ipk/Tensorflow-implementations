@@ -3,7 +3,7 @@
 This algorithm is for artistic style transfer.    
 Original paper: https://arxiv.org/abs/1508.06576
 
-If we understand the mechanism of painting by an artist it goes like:    
+If we understand the mechanism of painting by an artist it goes like this:    
 The artist has a scene in mind which he wants to paint, he also thinks of a style in his brain by which he wants to paint the scene on canvas.
 
 If we make the same analogy for this algorithm, the artist is the computer,    
