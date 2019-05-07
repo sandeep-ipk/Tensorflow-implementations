@@ -1,6 +1,6 @@
 # Heart beat anomaly detection
 
-In the recent years, I have seen an increase in the applications of data-driven methods in healthcare, especially deep learning methods.
+In the recent years, there has been an increase in the applications of data-driven methods in healthcare, especially deep learning methods.
 
 This work aims to classify abnormal heartbeat from the normal heartbeat. This abnormal beat is termed as "heart murmurs". Abnormal heart murmurs in adults are related to defective heart valves. Abnormal heart murmurs in adults may be related to Valve calcification, Endocarditis, Rheumatic fever. 
 
